@@ -49,7 +49,7 @@ const showItem = () => {
                         <div class="dropdown">
                                 <i class="bi bi-three-dots-vertical dropbtn three-dot"></i>
                             <div class="dropdown-content">
-                                <a  onclick="editItem(${doc.id})">Edit</a>
+                                <a href="#" onclick="editItem(${doc.id})">Edit</a>
                                 <a onclick="deleteItem(${doc.id}, '${doc.data().imagename}')" style="color: white;">Delete</a>
                             </div>
                         </div>
@@ -106,30 +106,30 @@ const deleteItem = (id, imagename) => {
 
 const editItem = (id) => {
     console.log(id);
-     var editItem = db.collection("orders").doc(`${id}`);
+    // var editItem = db.collection("orders").doc(`${id}`);
 
-     Set the "capital" field of the city 'DC'
-     return washingtonRef.update({
-         capital: true
-     })
-         .then(() => {
-             console.log("Document successfully updated!");
-         })
-         .catch((error) => {
-              The document probably doesn't exist.
-             console.error("Error updating document: ", error);
-         });
+    // // Set the "capital" field of the city 'DC'
+    // return washingtonRef.update({
+    //     capital: true
+    // })
+    //     .then(() => {
+    //         console.log("Document successfully updated!");
+    //     })
+    //     .catch((error) => {
+    //         // The document probably doesn't exist.
+    //         console.error("Error updating document: ", error);
+    //     });
 }
 
- for show and hide input in onchange
- const freeOrpaid = () => {
-     let resDeliveryType = document.getElementById('resDeliveryType').value, delvcharginp = document.getElementById('delvcharginp'), delvcharlab = document.getElementById('delvcharlab');
+//? for show and hide input in onchange
+// const freeOrpaid = () => {
+//     let resDeliveryType = document.getElementById('resDeliveryType').value, delvcharginp = document.getElementById('delvcharginp'), delvcharlab = document.getElementById('delvcharlab');
 
-     if (resDeliveryType == "Paid") {
-         delvcharginp.style.display = "block"
-        delvcharlab.style.display = "block"
-    } else {
-        delvcharginp.style.display = "none"
-        delvcharlab.style.display = "none"
-     }
- }
+//     if (resDeliveryType == "Paid") {
+//         delvcharginp.style.display = "block"
+//         delvcharlab.style.display = "block"
+//     } else {
+//         delvcharginp.style.display = "none"
+//         delvcharlab.style.display = "none"
+//     }
+// }
