@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5 text-center">
+          <h1>Login Account</h1>
+          <p>
+            Login Untuk Mendapatkan Informasi Akun Anda
+          </p>
+          <br />
+          <button class="btn btn-primary" onClick="loginUser()">
+            Login With Google
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCORThhpBzHN6_4Z1U-4kI__A6xf5fRuzA",
+        authDomain: "shopzoid-app.firebaseapp.com",
+        databaseURL: "https://shopzoid-app-default-rtdb.firebaseio.com",
+        projectId: "shopzoid-app",
+        storageBucket: "shopzoid-app.appspot.com",
+        messagingSenderId: "124724344551",
+        appId: "1:124724344551:web:7be967100ee7a075469442",
+        measurementId: "G-XFNSKZGLNM",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      function loginUser() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(function (result) {
+            window.location = "index.html";
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          window.location = "index.html";
+        } else {
+        }
+      });
+    </script>
+  </body>
+</html>
