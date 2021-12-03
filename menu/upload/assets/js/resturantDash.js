@@ -37,9 +37,9 @@ const showItem = () => {
     let resItem = document.getElementById('resItem');
     let html = '';
     auth.onAuthStateChanged((res) => {
-        db.collection("items").where("key", "==", res.uid).get().then((querySnapshot) => {
+        db.collection("Produk").where("key", "==", res.uid).get().then((querySnapshot) => {
             if (querySnapshot.empty) {
-                resItem.innerHTML = `<h2 class="text-center">No Picture</h2>`;
+                resItem.innerHTML = `<h2 class="text-center">Tambahkan Produk</h2>`;
                 loader.style.display = "none";
             }
             else {
