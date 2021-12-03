@@ -14,7 +14,7 @@ const addItem = () => {
             let resItemName = document.getElementById('resItemName').value; resPrice = document.getElementById('resPrice').value; resCatrgory = document.getElementById('resCatrgory').value;
             let genID = date.getTime();
             auth.onAuthStateChanged((res) => {
-                db.collection("Produk").doc(`${genID}`).set({
+                db.collection("items").doc(`${genID}`).set({
                     itemname: resItemName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
                     .then(() => {
@@ -39,7 +39,7 @@ const showItem = () => {
     auth.onAuthStateChanged((res) => {
         db.collection("items").where("key", "==", res.uid).get().then((querySnapshot) => {
             if (querySnapshot.empty) {
-                resItem.innerHTML = `<h2 class="text-center">Tambahkan Produk</h2>`;
+                resItem.innerHTML = `<h2 class="text-center">No Picture</h2>`;
                 loader.style.display = "none";
             }
             else {
@@ -50,7 +50,7 @@ const showItem = () => {
                                 <i class="bi bi-three-dots-vertical dropbtn three-dot"></i>
                             <div class="dropdown-content">
                                 <a href="#" onclick="editItem(${doc.id})">Edit</a>
-                                <a onclick="deleteItem(${doc.id}, '${doc.data().imagename}')" style="color: white;">Delete</a>
+                                <a onclick="deleteItem style="color: white;"(${doc.id}, '${doc.data().imagename}')">Delete</a>
                             </div>
                         </div>
                         <img src="${doc.data().imageurl}" id="image" class="card-img-top" alt="...">
