@@ -50,7 +50,7 @@ const showItem = () => {
                                 <i class="bi bi-three-dots-vertical dropbtn three-dot"></i>
                             <div class="dropdown-content">
                                 <a href="#" onclick="editItem(${doc.id})">Edit</a>
-                                <a onclick="deleteItem style="color: white;"(${doc.id}, '${doc.data().imagename}')">Delete</a>
+                                <a onclick="deleteItem(${doc.id}, '${doc.data().imagename}')" style="color: white;">Delete</a>
                             </div>
                         </div>
                         <img src="${doc.data().imageurl}" id="image" class="card-img-top" alt="...">
