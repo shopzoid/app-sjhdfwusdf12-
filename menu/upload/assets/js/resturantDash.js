@@ -49,7 +49,7 @@ const showItem = () => {
                         <div class="dropdown">
                                 <i class="bi bi-three-dots-vertical dropbtn three-dot"></i>
                             <div class="dropdown-content">
-                                <a href="#" onclick="editItem(${doc.id})">Edit</a>
+                                <a onclick="editItem(${doc.id})">Edit</a>
                                 <a onclick="deleteItem(${doc.id}, '${doc.data().imagename}')" style="color: white;">Delete</a>
                             </div>
                         </div>
