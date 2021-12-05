@@ -17,7 +17,6 @@ const addItem = () => {
                 db.collection("items").doc(`${genID}`).set({
                     itemname: resItemName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
-                document.getElementById("addingmemberform").reset();
                     .then(() => {
                         console.log("Document successfully written!");
                         showItem();
