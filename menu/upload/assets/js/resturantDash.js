@@ -15,7 +15,7 @@ const addItem = () => {
             let genID = date.getTime();
             auth.onAuthStateChanged((res) => {
                 db.collection("items").doc(`${genID}`).set({
-                    itemname: resItemName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
+                    itemname: resItemName,itemDeskripsi: resItemDeskripsi, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
                     .then(() => {
                         console.log("Document successfully written!");
