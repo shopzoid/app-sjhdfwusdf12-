@@ -21,6 +21,7 @@ const addItem = () => {
                         console.log("Document successfully written!");
                         showItem();
                         loader.style.display = "none"
+                        document.getElementById("addingmemberform").reset();
                     })
                     .catch((error) => {
                         console.error("Error writing document: ", error);
