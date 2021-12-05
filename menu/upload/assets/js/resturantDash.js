@@ -11,11 +11,11 @@ const addItem = () => {
 
     task.then(snapshot => snapshot.ref.getDownloadURL())
         .then(url => {
-            let resItemName = document.getElementById('resItemName').value; resPrice = document.getElementById('resPrice').value; resCatrgory = document.getElementById('resCatrgory').value;
+            let resItemName = document.getElementById('resItemName').value;  resItemDeskripsi = document.getElementById(' resItemDeskripsi').value; resPrice = document.getElementById('resPrice').value; resCatrgory = document.getElementById('resCatrgory').value;
             let genID = date.getTime();
             auth.onAuthStateChanged((res) => {
                 db.collection("items").doc(`${genID}`).set({
-                    itemname: resItemName,itemDeskripsi: resItemDeskripsi, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
+                    itemname: resItemName, itemDeskripsi: resItemDeskripsi, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
                     .then(() => {
                         console.log("Document successfully written!");
