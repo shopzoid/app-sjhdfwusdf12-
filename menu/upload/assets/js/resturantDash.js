@@ -5,6 +5,7 @@ const addItem = () => {
     let file = document.getElementById('resFoodImage').files[0];
     let date = new Date;
     let name = date.getTime() + '-' + file.name
+    document.getElementById("addingmemberform").reset();
 
     const metadata = { contentType: file.type }
     const task = ref.child(name).put(file, metadata);
