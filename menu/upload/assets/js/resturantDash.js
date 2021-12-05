@@ -5,7 +5,6 @@ const addItem = () => {
     let file = document.getElementById('resFoodImage').files[0];
     let date = new Date;
     let name = date.getTime() + '-' + file.name
-    document.getElementById("addingmemberform").reset();
 
     const metadata = { contentType: file.type }
     const task = ref.child(name).put(file, metadata);
@@ -18,6 +17,7 @@ const addItem = () => {
                 db.collection("items").doc(`${genID}`).set({
                     itemname: resItemName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
+                document.getElementById("addingmemberform").reset();
                     .then(() => {
                         console.log("Document successfully written!");
                         showItem();
