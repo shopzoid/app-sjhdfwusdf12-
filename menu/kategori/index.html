@@ -47,7 +47,7 @@
             <nav class="iq-sidebar-menu">
                <ul id="iq-sidebar-toggle" class="iq-menu">
                   <li>
-                     <a href="/../index.html" class="iq-waves-effect" ><span class="ripple rippleEffect"></span><i
+                     <a href="/../index.html" class="iq-waves-effect"><span class="ripple rippleEffect"></span><i
                            class="las la-home iq-arrow-left"></i><span>Home</span></a>
                   </li>
                   <li class="active active-menu">
@@ -465,7 +465,8 @@
                         <!--Nama Toko-->
                         <div class="input-group">
                            <label for="tokomu" class="label">Nama Tokomu</label>
-                           <input id="tokomu" name="tokomu" placeholder="Nama Tokomu" type="text" class="input" required>
+                           <input id="tokomu" name="tokomu" placeholder="Nama Tokomu" type="text" class="input"
+                              required>
                            <span class="error-message"></span>
                            <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20" fill="currentColor">
@@ -635,7 +636,8 @@
                            </style>
                            <div class="input-group">
                               <div class="help-tip">
-                                 <p>Copy Link Yang Berada Pada Tampilan Produk Yang Ingin Kamu Tautkan Pada Kategori Ini.<br />
+                                 <p>Copy Link Yang Berada Pada Tampilan Produk Yang Ingin Kamu Tautkan Pada Kategori
+                                    Ini.<br />
                                     <!--Link--
                                     <a href="https://id.imgbb.com/" style="text-decoration-line: overline;">Upload
                                        Img</a>
@@ -824,6 +826,13 @@
             }
          }
       }
+
+      window.addEventListener("online", function () {
+         document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+      });
+      window.addEventListener("offline", function () {
+         document.body.innerText = "you are offline";
+      });
    </script>
 
 </body>

@@ -65,7 +65,7 @@
                            class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                      <ul id="toko" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
                         <li><a href="menu/toko-online/halaman-link.html">Halaman Link Saya</a></li>
-                        <li><a onclick="Segera()">Template Olshop</a></li>
+                        <li><a href="menu/toko-online/template.html">Template Olshop</a></li>
                         <li><a onclick="Segera()">Preferensi Toko</a></li>
                         <li><a onclick="Segera()">Blog Toko</a></li>
                      </ul>
@@ -756,19 +756,15 @@
          var mToast = document.getElementById('toast_message');
          mToast.innerHTML = "This is a toast message";
       }
+
+      window.addEventListener("online", function () {
+         document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+      });
+      window.addEventListener("offline", function () {
+         document.body.innerText = "you are offline";
+      });
    </script>
 
-<div class="network">
-<script
-type="text/javascript">var message = "Right-click has been disabled"; function clickIE() { if (document.all) { (message); return false; } } function clickNS(e) { if (document.layers || (document.getElementById && !document.all)) { if (e.which == 2 || e.which == 3) { (message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; } else { document.onmouseup = clickNS; document.oncontextmenu = clickIE; } document.oncontextmenu = new Function("return false"); document.getElementsByClassName('my-img').ondragstart = function () { return false; };
-
-window.addEventListener("online",function(){
-		document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
-});
-		window.addEventListener("offline",function(){
-     	document.body.innerText = "you are offline";
-});
-</script>
    <!-- color-customizer END -->
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->

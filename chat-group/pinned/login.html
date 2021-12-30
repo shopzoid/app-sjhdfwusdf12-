@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 </head>
+
 <body>
-    
+
     <div class="wrapper-login">
         <button class="login"><i class="ri-google-line"></i> Login with Google</button>
     </div>
@@ -23,39 +25,45 @@
         // Your web app's Firebase configuration (ENTER YOUR FIREBASE DETAILS HERE
         var firebaseConfig = {
             apiKey: "AIzaSyCORThhpBzHN6_4Z1U-4kI__A6xf5fRuzA",
-  authDomain: "shopzoid-app.firebaseapp.com",
-  databaseURL: "https://shopzoid-app-default-rtdb.firebaseio.com",
-  projectId: "shopzoid-app",
-  storageBucket: "shopzoid-app.appspot.com",
-  messagingSenderId: "124724344551",
-  appId: "1:124724344551:web:7be967100ee7a075469442",
-  measurementId: "G-XFNSKZGLNM"
+            authDomain: "shopzoid-app.firebaseapp.com",
+            databaseURL: "https://shopzoid-app-default-rtdb.firebaseio.com",
+            projectId: "shopzoid-app",
+            storageBucket: "shopzoid-app.appspot.com",
+            messagingSenderId: "124724344551",
+            appId: "1:124724344551:web:7be967100ee7a075469442",
+            measurementId: "G-XFNSKZGLNM"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
         var provider = new firebase.auth.GoogleAuthProvider();
         var login = document.querySelector('.login');
-        
-        firebase.auth().onAuthStateChanged(function(user) {
+
+        firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 // console.log(user);
                 window.location = 'index.html';
             }
-        });        
+        });
 
         login.addEventListener('click', (e) => {
             firebase.auth()
-            .signInWithPopup(provider)
-            .then((result) => {
-                window.location = 'index.html'
-            }).catch((error) => {
-                console.log(error);
-            });
+                .signInWithPopup(provider)
+                .then((result) => {
+                    window.location = 'index.html'
+                }).catch((error) => {
+                    console.log(error);
+                });
         })
-        
 
+        window.addEventListener("online", function () {
+            document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+        });
+        window.addEventListener("offline", function () {
+            document.body.innerText = "you are offline";
+        });
     </script>
 
 </body>
+
 </html>

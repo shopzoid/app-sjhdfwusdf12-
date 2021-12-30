@@ -132,3 +132,11 @@ function formatAMPM() {
     let dateTxt = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}  ${strTime}`
     return dateTxt;
 }
+
+
+window.addEventListener("online",function(){
+    document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+});
+    window.addEventListener("offline",function(){
+     document.body.innerText = "you are offline";
+});

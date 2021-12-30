@@ -106,25 +106,25 @@
          </div>
       </div>
       <!-- TOP Nav Bar -->
-      <div class="iq-top-navbar">
-         <div class="iq-navbar-custom">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-               <div class="iq-menu-bt d-flex align-items-center">
-                  <!--Sidebar--
+   <div class="iq-top-navbar">
+      <div class="iq-navbar-custom">
+         <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="iq-menu-bt d-flex align-items-center">
+               <!--Sidebar--
                   <div class="wrapper-menu">
                      <div class="main-circle"><i class="las la-bars"></i></div>
                   </div>
                   <!--Sidebar-->
-                  <div class="iq-navbar-logo d-flex justify-content-between">
-                     <a class="header-logo">
-                        <img src="images/logo.png" class="img-fluid rounded-normal" alt="">
-                        <div class="logo-title">
-                           <span class="text-primary text-uppercase">ShopZoid</span>
-                        </div>
-                     </a>
-                  </div>
+               <div class="iq-navbar-logo d-flex justify-content-between">
+                  <a class="header-logo">
+                     <img src="images/logo.png" class="img-fluid rounded-normal" alt="">
+                     <div class="logo-title">
+                        <span class="text-primary text-uppercase">ShopZoid</span>
+                     </div>
+                  </a>
                </div>
-               <!--Search--
+            </div>
+            <!--Search--
                   <div class="navbar-breadcrumb">
                      <h5 class="mb-0">Faq</h5>
                      <nav aria-label="breadcrumb">
@@ -416,8 +416,8 @@
                                     <div class="d-inline-block w-100 text-center p-3">
                                        <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                     </div><!--Search-->
-         </div>
       </div>
+   </div>
    </div>
    </li>
    </ul>
@@ -443,17 +443,20 @@
             </div>
          </div>
          <div class="iq-card-body">
-            <p>• Dilarang membagikan konten yang berbau politik, SARA, konten tidak senonoh dan konten yang memancing perdebatan. 
-            <br><br>• Bercanda sewajarnya, jangan sampai menimbulkan emosi dan perselisihan. 
-            <br><br>• Setiap member diharuskan untuk menjaga ketertiban grup dengan mentaati peraturan ini. 
-            <br><br>• Dilarang menghina maupun memancing emosi anggota lain.
-            <br><br>• Admin berhak menegur maupun memberikan sanksi tegas (memblokir) member yang berulang-kali melanggar peraturan.</p>
+            <p>• Dilarang membagikan konten yang berbau politik, SARA, konten tidak senonoh dan konten yang memancing
+               perdebatan.
+               <br><br>• Bercanda sewajarnya, jangan sampai menimbulkan emosi dan perselisihan.
+               <br><br>• Setiap member diharuskan untuk menjaga ketertiban grup dengan mentaati peraturan ini.
+               <br><br>• Dilarang menghina maupun memancing emosi anggota lain.
+               <br><br>• Admin berhak menegur maupun memberikan sanksi tegas (memblokir) member yang berulang-kali
+               melanggar peraturan.
+            </p>
             <div class="bd-example">
                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+               </div>
+            </div>
          </div>
       </div>
-   </div>
-   </div>
    </div>
    </div>
    </div>
@@ -475,12 +478,12 @@
                      <!--Button--
                         <a href="#" class="btn btn-primary">Button</a>
                         <!--Button-->
-                  </div>
-               </div>
-            </div>
+   </div>
+   </div>
+   </div>
 
-         </div>
-      </div>
+   </div>
+   </div>
    </div>
    </div>
    </div>
@@ -544,6 +547,7 @@
    </script>
    <!-- color-customizer END -->
    <!-- Optional JavaScript -->
+
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/popper.min.js"></script>
@@ -597,6 +601,15 @@
    <script src="assets/js/chart-custom.js"></script>
    <!-- Custom JavaScript -->
    <script src="assets/js/custom.js"></script>
+
+   <script>
+      window.addEventListener("online", function () {
+         document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+      });
+      window.addEventListener("offline", function () {
+         document.body.innerText = "you are offline";
+      });
+   </script>
 </body>
 
 <!-- Mirrored from iqonic.design/themes/booksto/html/pages-faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Mar 2021 03:56:05 GMT -->
