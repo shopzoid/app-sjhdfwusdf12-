@@ -52,7 +52,7 @@
                            class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                      <ul id="produk" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li><a href="menu/upload/index.html">Upload Produk</a></li>
-                        <li><a href="menu/upload/kategori.html">Kategori</a></li>
+                        <li><a href="menu/kategori/">Kategori</a></li>
                      </ul>
                   </li>
                   <li>
@@ -60,7 +60,7 @@
                            class="ripple rippleEffect"></span><i class="ri-store-3-line"></i><span>Toko Online</span><i
                            class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                      <ul id="toko" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
-                        <li><a onclick="Segera()">Halaman Link Saya</a></li>
+                        <li><a href="menu/toko-online/halaman-link.html">Halaman Link Saya</a></li>
                         <li><a onclick="Segera()">Template Olshop</a></li>
                         <li><a onclick="Segera()">Preferensi Toko</a></li>
                         <li><a onclick="Segera()">Blog Toko</a></li>
@@ -94,7 +94,7 @@
                         <div class="image"><img src="images/page-img/side-bkg.png" alt=""></div>
                         <!--Button-->
                         <a href="menu/daftar/index.html">
-                        <button type="submit" class="btn w-100 btn-primary mt-4 view-more">Daftar ShopZoid</button>
+                           <button type="submit" class="btn w-100 btn-primary mt-4 view-more">Daftar ShopZoid</button>
                         </a>
                         <!--Button-->
                      </div>
@@ -447,13 +447,16 @@
                   </ol>
                   <div class="carousel-inner">
                      <div class="carousel-item active">
-                        <img src="assets/images/Slider/slider-1.png" class="d-block w-100" alt="#" style="pointer-events: none;">
+                        <img src="assets/images/Slider/slider-1.png" class="d-block w-100" alt="#"
+                           style="pointer-events: none;">
                      </div>
                      <div class="carousel-item">
-                        <img src="assets/images/segerahadir.jpg" class="d-block w-100" alt="#" style="pointer-events: none;">
+                        <img src="assets/images/segerahadir.jpg" class="d-block w-100" alt="#"
+                           style="pointer-events: none;">
                      </div>
                      <div class="carousel-item">
-                        <img src="assets/images/segerahadir.jpg" class="d-block w-100" alt="#" style="pointer-events: none;">
+                        <img src="assets/images/segerahadir.jpg" class="d-block w-100" alt="#"
+                           style="pointer-events: none;">
                      </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -610,7 +613,7 @@
                   </div>
                </div>
                <a href="menu/toko-online/halaman-link.html">
-               <button type="submit" class="btn w-100 btn-primary mt-4 view-more">Atur Halaman Link Saya</button>
+                  <button type="submit" class="btn w-100 btn-primary mt-4 view-more">Atur Halaman Link Saya</button>
                </a>
             </div>
          </div>
@@ -696,60 +699,60 @@
          </ul>
          <a class="btn btn-primary d-block mt-3" href="chat-group/index.html">Chat
             Group</a>
-         <a class="btn btn-primary d-block mt-3" href="menu/upload/profile.html">Profile</a>  
+         <a class="btn btn-primary d-block mt-3" href="menu/upload/profile.html">Profile</a>
       </div>
    </div>
 
    <div id="toast_container" class="toast_container">
-		<span id="toast_message"></span>
-	</div>
+      <span id="toast_message"></span>
+   </div>
 
    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- The core Firebase JS SDK is always required and must be listed first --
+   <!-- The core Firebase JS SDK is always required and must be listed first --
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
     <script src="login-js/app.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script>
-		function ShowToast() {
-			var sToast = document.getElementById('toast_container');
-			sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+   <script>
+      function ShowToast() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
 
-			var mToast = document.getElementById('toast_message');
-			mToast.innerHTML = "Halaman Request Belum Tersedia";
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Halaman Request Belum Tersedia";
 
-			setTimeout(HideToast, 5000);
-		}
+         setTimeout(HideToast, 5000);
+      }
 
-		function Segera() {
-			var sToast = document.getElementById('toast_container');
-			sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+      function Segera() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
 
-			var mToast = document.getElementById('toast_message');
-			mToast.innerHTML = "Tampilan Ini Segera Hadir";
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Tampilan Ini Segera Hadir";
 
-			setTimeout(HideToast, 5000);
-		}
+         setTimeout(HideToast, 5000);
+      }
 
-        function ShowPremium() {
-			var sToast = document.getElementById('toast_container');
-			sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+      function ShowPremium() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
 
-			var mToast = document.getElementById('toast_message');
-			mToast.innerHTML = "Paket Premium Belum Tersedia";
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Paket Premium Belum Tersedia";
 
-			setTimeout(HideToast, 5000);
-		}
+         setTimeout(HideToast, 5000);
+      }
 
-        function HideToast() {
-			var sToast = document.getElementById('toast_container');
-			sToast.setAttribute('style', 'visibility:hidden; animation:animation_toast 5s linear 1;');
+      function HideToast() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:hidden; animation:animation_toast 5s linear 1;');
 
-			var mToast = document.getElementById('toast_message');
-			mToast.innerHTML = "This is a toast message";
-		}
-	</script>
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "This is a toast message";
+      }
+   </script>
    <!-- color-customizer END -->
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
