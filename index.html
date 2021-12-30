@@ -756,31 +756,19 @@
          var mToast = document.getElementById('toast_message');
          mToast.innerHTML = "This is a toast message";
       }
-
-      var message = "Right-click has been disabled";
-      function clickIE() {
-         if (document.all) {
-            (message);
-            return false;
-         }
-      } function clickNS(e) {
-         if (document.layers || (document.getElementById && !document.all)) {
-            if (e.which == 2 || e.which == 3) {
-               (message);
-               return false;
-            }
-         }
-      } if (document.layers) {
-         document.captureEvents(Event.MOUSEDOWN);
-         document.onmousedown = clickNS;
-      } else {
-         document.onmouseup = clickNS; document.oncontextmenu = clickIE;
-      }
-      document.oncontextmenu = new Function("return false");
-      document.getElementsByClassName('my-img').ondragstart = function () {
-         return false;
-      };
    </script>
+
+<div class="network">
+<script
+type="text/javascript">var message = "Right-click has been disabled"; function clickIE() { if (document.all) { (message); return false; } } function clickNS(e) { if (document.layers || (document.getElementById && !document.all)) { if (e.which == 2 || e.which == 3) { (message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; } else { document.onmouseup = clickNS; document.oncontextmenu = clickIE; } document.oncontextmenu = new Function("return false"); document.getElementsByClassName('my-img').ondragstart = function () { return false; };
+
+window.addEventListener("online",function(){
+		document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+});
+		window.addEventListener("offline",function(){
+     	document.body.innerText = "you are offline";
+});
+</script>
    <!-- color-customizer END -->
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
