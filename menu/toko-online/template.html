@@ -583,6 +583,51 @@
       function comingsoon() {
          alert("Template Ini Segera Hadir");
       }
+
+      function ShowToast() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Halaman Request Belum Tersedia";
+
+         setTimeout(HideToast, 5000);
+      }
+
+      function Segera() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Tampilan Ini Segera Hadir";
+
+         setTimeout(HideToast, 5000);
+      }
+
+      function ShowPremium() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:visible; animation:animation_toast 5s linear 1;');
+
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "Paket Premium Belum Tersedia";
+
+         setTimeout(HideToast, 5000);
+      }
+
+      function HideToast() {
+         var sToast = document.getElementById('toast_container');
+         sToast.setAttribute('style', 'visibility:hidden; animation:animation_toast 5s linear 1;');
+
+         var mToast = document.getElementById('toast_message');
+         mToast.innerHTML = "This is a toast message";
+      }
+
+      window.addEventListener("online", function () {
+         document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+      });
+      window.addEventListener("offline", function () {
+         document.body.innerText = "you are offline";
+      });
    </script>
 
    <!-- Optional JavaScript -->
