@@ -23,14 +23,13 @@ function submitForm(e) {
   alert("Produk Telah Terkirim Tunggu 1-2 Hari");
 
   // Get values
+  var tokomu = getInputVal('tokomu');
   var name = getInputVal('name');
-  var tanggal = getInputVal('tanggal');
-  var jam = getInputVal('jam');
-  var phone = getInputVal('phone');
-  var image = getInputVal('image');
+  var tipe = getInputVal('tipe');
+  var link = getInputVal('link');
 
   // Save message
-  saveMessage(name, tanggal, jam, phone, image);
+  saveMessage(tokomu, name, tipe, link);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -50,13 +49,12 @@ function getInputVal(id) {
 }
 
 // Save message to firebase
-function saveMessage(name, tanggal, jam, phone, image) {
+function saveMessage(tokomu, name, tipe, link) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
+    tokomu: tokomu,
     name: name,
-    tanggal: tanggal,
-    jam: jam,
-    phone: phone,
-    image: image,
+    tipe: tipe,
+    link: link,
   });
 }
